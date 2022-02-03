@@ -1,0 +1,28 @@
+Liste de {{ currentUser.user.name }}
+<br><br>
+
+<label for="task">Ajouter une tâche</label><br>
+<input type="text" id="task" [(ngModel)]="todoLabel" required>
+<button (click)="create(todoLabel)">Créer</button>
+
+<br>
+
+<h1>Tâches</h1>
+<div *ngFor="let t of todosStore | async">
+    <div *ngIf="idToUpdate != t.todo_id">
+
+        <span>{{t.todo_label}} {{ t.todo_date | date:'shortDate' }} </span>
+        <button (click)="delete(t.todo_id)">Supprimer</button>
+        <button (click)="showUpdate(t.todo_id, t.todo_label)">Modifier</button>
+
+        <span> terminée:</span> <input type="checkbox" [checked]="t.todo_is_done"
+            (change)="changeIsDone(t.todo_id, t.todo_label, $event)">
+    </div>
+
+    <div *ngIf="idToUpdate == t.todo_id">
+        <input type="text" id="task" [(ngModel)]="todoUpdateLabel" required>
+        <button (click)="updateLabel(t.todo_id, t.todo_is_done)">Modifier</button>
+    </div><br>
+</div>
+<br>
+<a style="cursor: pointer;" (click)="signOut()">Déconnexion</a>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-weplus';
+  isLoggedIn = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }
