@@ -11,10 +11,11 @@ Liste de {{ currentUser.user.name }}
 <div *ngFor="let t of todosStore | async">
     <div *ngIf="idToUpdate != t.todo_id">
 
-        <span>{{t.todo_label}} {{ t.todo_date | date:'shortDate' }} </span>
+        <span><strong> {{t.todo_label}} </strong> <strong> | </strong> date: {{ t.todo_date | date:'shortDate' }} </span>
         <button (click)="delete(t.todo_id)">Supprimer</button>
+        <strong> | </strong> 
         <button (click)="showUpdate(t.todo_id, t.todo_label)">Modifier</button>
-
+        <strong> | </strong> 
         <span> terminée:</span> <input type="checkbox" [checked]="t.todo_is_done"
             (change)="changeIsDone(t.todo_id, t.todo_label, $event)">
     </div>
