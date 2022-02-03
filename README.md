@@ -1,3 +1,23 @@
+
+Installation locale :
+
+git clone https://github.com/mfertah/test-weplus.git
+cd test-weplus
+npm i
+
+ng serve
+
+Une fois l'application lancée sur: http://localhost:4200/
+
+Vous pouvez vous connecter en utilisant les identifiants suivants:
+
+test1 : 123
+test2 : 123
+test3 : 123
+test4 : 123
+
+Il n'y a pas de back, c'est une API distante 
+
 # TestWeplus
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
