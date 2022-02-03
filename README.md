@@ -1,5 +1,5 @@
 
-Installation locale :
+# Installation locale :
 
 git clone https://github.com/mfertah/test-weplus.git
 cd test-weplus
@@ -18,7 +18,7 @@ test4 : 123
 
 Il n'y a pas de back, c'est une API distante 
 
-# TestWeplus
+------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
